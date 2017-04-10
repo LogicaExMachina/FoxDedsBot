@@ -1,0 +1,15 @@
+FoxDedsBot
+Copyright 2017 Robert L Quigley
+
+FoxDedsBot is designed to assist the FociePlays community in tracking how often Fox or Focie have died during the
+current playthrough.  It supports historical information about previous games, multiple games being played.
+
+Low hanging implemenation:
+
+* Implement method to change mod_role setting from Discord
+* Introduce logging
+* Export deds list to file for funsies
+
+Long-term Goals
+
+* Add YT Gaming Bot functionality
