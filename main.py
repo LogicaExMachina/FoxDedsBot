@@ -51,7 +51,7 @@ def init(bot_class=FocieDeds):
 
     def check_roles(droles):
         roles = [n.name for n in droles]
-        return set(roles).intersection(set((bot.settings.mod_role, bot.settings.admin_role)))
+        return set(roles).intersection(set(bot.settings.spec_role))
 
     @bot.event
     @asyncio.coroutine

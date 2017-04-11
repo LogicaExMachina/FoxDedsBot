@@ -16,8 +16,8 @@ class Settings:
             "PASSWORD": None,
             "OWNER": None,
             "PREFIXES": [],
-            "default": {"ADMIN_ROLE": "Daddy",
-                        "MOD_ROLE": "Deds",
+            "default": {"ADMIN_ROLE": ["Daddy"],
+                        "MOD_ROLE": ["Deds"],
                         "PREFIXES": []}
         }
         self.logger = logging.getLogger("Conf")
@@ -71,8 +71,13 @@ class Settings:
     def mod_role(self):
         return self.current["MOD_ROLE"]
 
+    @property
     def admin_role(self):
         return self.current["ADMIN_ROLE"]
+
+    @property
+    def spec_roles(self):
+        return set(self.mod_role) | set(self.admin_role)
 
     @property
     def owner(self):
